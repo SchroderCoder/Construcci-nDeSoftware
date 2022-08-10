@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+
+<!-- Laboratorio 1: Introducción a HTML 5-->
+
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi primera pagina web</title>
+</head>
+
+<body>
+  <body bgcolor="6FA5C6 ">
+   <header>
+        <span style="color: white"> <h1> Página web de Carlos Adrián García Estrada</h1></span>
+        <h2>Datos:</h2>
+        <ul>
+           
+            <li> <strong>Matrícula: A01707503</strong></li>
+            <li> <strong>A01707503@tec.mx</strong></li>
+        </ul>
+   </header>
+   <img src="C:\Users\Charlie\OneDrive\Imágenes\charlie.jpeg" height="550" alt="Imagen del autor de la página: Carlos, en una estación de tren">
+  <section>
+    <article>
+      <header>
+        <h2> Sobre mí</h2>
+      </header>
+        <p>
+          ¡Hola Mundo! me llamo Carlos pero me puedes decir Charlie, Soy alguien muy apasionado y curioso respecto a la ciencia y la música, siempre trato de aprender algo nuevo y nunca me conformo. Mis pasatiempos favoritos son: 
+          <ul>
+            <strong> 
+              <li> Videojuegos</li>
+              <li> Leer ciencia ficción</li>
+              <li> Tocar la guitarra</li>
+          </strong>
+          </ul>
+        </p>
+        <p>
+          Estoy aprendiendo:
+          <ul>
+            <strong>
+             <li> Ajedrez</li>
+              <li> Teoría musical</li>
+              <li> Patinaje sobre ruedas</li>
+            </strong>
+          </ul>
+        </p>
+        <p>
+          En un futuro me gustaría convertirme en un desarrollador de videojuegos, me considero alguien creativo, comprometido y amistoso.
+        </p>
+    </article>
+    <article>
+      <header>
+        <h2> Ahora sobre tí</h2>
+      </header>
+      <form>
+        <p>
+          <label>¿Con qué color me asocias?: 
+              <input type="color" autofocus />
+          </label>
+        </p>
+        <p>
+          <label>¿De cuantos años me veo?: 
+              <input type="number" min = "0" max="99" step="1" value="35"/>
+          </label>
+        </p>
+        <p>
+          <label>Dime algo sobre tí: 
+              <input type="text" />
+          </label>
+        </p>
+        <p>
+          <label>Pon algún video chistoso que te gustaría que viera: 
+              <input type="url" placeholder="https://www.youtube.com/watch?v=dQw4w9WgXcQ" />
+          </label>
+      </p>
+      <p>
+          <input type="submit" value="Enviar" />
+      </p>
+      </form>
+    </article>
+  </section> 
+  <section>
+    <article>
+      <header>
+        <h2>
+          Preguntas
+        </h2>
+      </header>
+      <h3> Sobre HTML5</h3>
+      <ol>
+        <strong>
+          <li> ¿Cuál es la diferencia entre Internet y la World Wide Web?</li>
+          <span style="color: white"> <p> El internet es un servidor enorme, mientras que la world wide web es un conjunto de paginas web " </p></span>
+          <li> ¿Cuáles son las partes de un URL?</li>
+          <span style="color: white"> <p> Tiene 4 partes principales: el Protocolo: se refiere al estándar envió de datos, el dominio que indica la IP de la página, la dirrección  que indíca el camino para llegar a la página desde el servidor y los parametros que se refieren a la busqueda o query </p></span>
+          <li> ¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</li>
+          <span style="color: white"> <p> GET nos permite recuperar datos de una pagina sin modificarlo. El metodo HEAD permite saber si existe el dato a obtener por GET al regresar el encabezado. El método POST permite mandar datos a  un servidor. El método PUT permite editar el dato del servidor. El método PATCH permite modifica parcialmente un recurso. El método DELETE elimina un recurso específico" </p></span>
+          <li> ¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿Por qué?</li>
+          <span style="color: white"> <p> Se debe utilizar el método POST, pues este manda la información de nuestra computadora a el servidor" </p></span>
+          <li> ¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL?</li>
+          <span style="color: white"> <p> El método GET, pues este nos permite visualizar la pagina al utiliazr la URL y representar los recursos en nuestra computadora </p></span>
+          <li> Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error?</li>
+          <span style="color: white"> <p> No ocurre un error, esto nos indica que el query fue exitoso y se redigira al usuario </p></span>
+          <li> ¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 404? ¿Por qué?</li>
+          <span style="color: white"> <p> No, esto error indica que el query contiene un erro pues no coincide con ningún dominio </p></span>
+          <li> ¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 500? ¿Por qué?</li>
+          <span style="color: white"> <p> En este caso sí, este codigo indica que aunque el query fue exitoso el error es interno al servidor y es necesario hacer los ajustes necesarios para que se pueda acceder</p></span>
+          <li> ¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén desaprobados.</li>
+          <span style="color: white"> <p> Se refiere a cualquier atributo que ya no se le da soporte porque ha sido remplazado, un ejemplo es "font" que ha sido remplazado por font family y font size </font> </p></span>
+          <li> ¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</li>
+          <span style="color: white"> <p> HTML5 es una versión superior pues tiene un peso semántico mucho mayor y donde se separa el contenido de la estructura, además que la creación de código es más limpia y simple, para declarar el DOCTYPE en HTML es suficiente con escribir DOCTYPE html además de que hay mucho más soporte a etiquetas</p></span>
+          <li> ¿Qué componentes de estructura y estilo tiene una tabla?</li>
+          <span style="color: white"> <p> Tiene muchos entre ellos están: thead, tfoot, tr, tc, tbody, col, colgroup, td y caption  </p></span>
+          <li> ¿Cuáles son los principales controles de una forma HTML5?</li>
+          <span style="color: white"> <p>  Los principales son: input de texto, area de texto, selección, radio, checkboxes, subida de URL y archivos.</p></span>
+          <li> ¿Qué tanto soporte HTML5 tiene el navegador que utilizas? Puedes utilizar la siguiente página para descubrirlo: http://html5test.com/ (Al responder la pregunta recuerda poner el navegador que utilizas)</li>
+          <span style="color: white"> <p> Mi navegador Chrome 104 soporta 476 de 555 caracterísiticas </p></span>
+        </strong>
+      </ol>
+      <h3> Sobre el ciclo de vida y desarrollo de sistemas de información</h3>
+      <ol>
+        <strong>
+          <li> ¿Cuál es el ciclo de desarrollo de sistemas de información? </li>
+          <span style="color: white"> <p> Se refiere a una metodología para aplicable al desarrollo de software y se divide en 7 partes: Planificación, análisis, diseño, desarrollo, integración y pruebas, implementación y mantenimiento.</p></span>
+          <li> ¿Cuál es el ciclo de desarrollo de sistemas de información?</li>
+          <span style="color: white"> <p> Es parte del ciclo de desarrollo de sistemas, pero no sol termina en mantenimiento, sino también tiene una fase de obsolencia y/o remplazo</p></span>
+        </strong>
+      </ol>
+    </article>
+  </section>
+  <section>
+    <article>
+      <header>
+        <h2> 
+          Referencias:
+        </h2>
+        <ol>
+         <li> Goran, A.(19 de septiembre 2019). "An introduction to HTTP: everything you need to know".Freecodecamp. Recuperado de: https://www.freecodecamp.org/news/http-and-everything-you-need-to-know-about-it/ </li> 
+         <li> Ramos, C. (26 de enero 2022). "HTTP request methods- Get vs Put vs Post Explained with code examples. Freecodecamp. Recuperado de:  https://www.freecodecamp.org/news/http-request-methods-explained/</li>
+         <li>Copes, F. (23 de Julio 2022). The HTML handbook- Learn HTML for begginers. Freecodecamp.Recuperado de: https://www.freecodecamp.org/news/the-html-handbook/</li>
+         <li>W3 schools. (s.f) . HTML Tables. Recuperado de: https://www.w3.org/TR/html4/conform.html#:~:text=A%20deprecated%20element%20or%20attribute,in%20future%20versions%20of%20HTML.</li>
+         <li> Deepali. (30 de julio 2022). Difference between HTML4 and HTML5. Nakuri Learning. Recuperado de: https://www.naukri.com/learning/articles/difference-between-html4-and-html5/</li>
+         <li> PowerData. (7 de junio de 2019). Ciclo de vida de un sistema de información: fases y componentes. Recuperado de: https://blog.powerdata.es/el-valor-de-la-gestion-de-datos/ciclo-de-vida-de-un-sistema-de-informacion-fases-y-componentes</li>
+        </ol> 
+      </header>
+    </article>
+  </section>
+  
+  <footer>
+    Ejemplo html5, Desarrollado con Visual Studio Code. https://code.visualstudio.com/
+  </footer>
+</body>
+</html>
