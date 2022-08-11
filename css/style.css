@@ -1,7 +1,15 @@
 
 h1{
+    text-align: center;
     font-family: 'Courier New', Courier, monospace;
+    background-color: cadetblue;
     
+}
+
+h2{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: cadetblue;
 }
 .azul{
     color:cadetblue;
