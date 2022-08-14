@@ -34,17 +34,17 @@ let endTime = performance.now();
 let time= Math.round((endTime - startTime)/1000)
 
 if (res== num1+num2){
-    document.write("¡Correcto crack!  Tiempo: " + time + " segundos");
+    document.write("¡Correcto crack!     Tiempo: " + time + " segundos");
 }
 
 else{
-    document.write("incorrecto, a estudiar más paps. Tiempo: " +time + " segundos");
+    document.write("incorrecto, a estudiar más paps.    Tiempo: " +time + " segundos");
 }
 
 //-----------------------Caso 3-----------------------------------------------------
 //Casos de prueba
 //Caso 1: input= [0,3,6,-1,0,-24,5,0,-4] output= El arreglo contiene: 3 ceros, 3 números negativos y 3 numeros positivos
-//Cas0 2: input = [1,2,3,4,5,6,7] output=  El arreglo contiene: 0 ceros, 3¿0 números negativos y 7 numeros positivos
+//Cas0 2: input = [1,2,3,4,5,6,7] output=  El arreglo contiene: 0 ceros, 0 números negativos y 7 numeros positivos
 
 document.write("<br><br> Respuesta Caso 3 : ")
 
