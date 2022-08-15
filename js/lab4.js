@@ -97,6 +97,7 @@ function promedios(arr){
 
 let arr1= [1,2,3], arr2= [4,5,6], arr3= [7,8,9];
 let array= [arr1,arr2,arr3];
+document.write("Los arreglos son: "+ arr1+ " : "+ arr2+" : "+ arr3);
 let promedio= promedios(array);
 promedio[0];    
 promedio[1];
