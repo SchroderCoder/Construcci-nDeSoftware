@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio 6</title>
+    <nav>
+        <div class="nav-wrapper red">
+          <a href="#" class="brand-logo ">TC2005B </a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="sass.html">Laboratorio 6</a></li>
+            <li><a href="badges.html">Carlos Adrián García Estrada </a></li>
+            <li><a href="collapsible.html">A01707503</a></li>
+          </ul>
+        </div>
+      </nav>
+        <div class="container">
+            <!-- Page Content goes here -->
+        <meta charset="UTF-8">
+        <link type="text/css" rel="stylesheet" href="css/lab6.css" media="screen, projection"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+
+<body>
+    <section>
+        <article>
+
+        </article>
+        <article>
+            <h3> Preguntas Lab 6 class</h3>
+                <div class = "accordion" >
+                    <div class = "contentBx"> 
+                        <div class = "label"> Pregunta 1:  ¿Por qué es una buena práctica usar JavaScript para checar que sean válidos los inputs de las formas antes de enviar los datos al servidor?</div>
+                        <div class = "content">
+                            <p> Por la experiencia del usuario. De esta manera evitamos que se necesite confirmar los datos con conexión de internet y podemos aceptar o declinar el formato inmediatamente.</p>
+                        </div>
+                    </div>
+                    <div class = "contentBx"> 
+                        <div class = "label"> Pregunta 2: ¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?</div>
+                        <div class = "content">
+                            <p> Hay 2 simples maneras: podemos desactivar javascript en nuestro navegador y podemos entrar al html y borrar la lectura del script.</p>
+                        </div>
+                    </div>
+                    <div class = "contentBx"> 
+                        <div class = "label"> Pregunta 3:   Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿por qué la primera pregunta dice que es una buena práctica?</div>
+                        <div class = "content">
+                            <p>  Para la experiencia del usuario común, es necesario seguir validando sin ocupar una conexión para reducir el tiempo de espera para aquellos que quieran usar nuestra aplicación como fue diseñada.</p>
+                        </div>
+                    </div>
+                </div>
+        </article>
+        <article>
+            <h3> Referencias</h3>
+            <ul>   
+                <li>Cerón, M. (s.f). Hackaboss. Recuperado de: https://www.hackaboss.com/blog/diferencias-javascript-java </li>
+                <li>Adhikary, T. (mayo 21, 2021). The JavaScript Array Handbook – JS Array Methods Explained with Examples. Recuperado de: https://www.freecodecamp.org/news/the-javascript-array-handbook/</li>
+                <li >W3 schools. (s.f). Recuperado de: https://www.w3schools.com/js/js_date_methods.asp</li>
+            </ul>
+        </article>
+    </section>
+    <script>
+        const accordion = document.getElementsByClassName("contentBx");
+        for (i=0; i<accordion.length; i++){
+            accordion[i].addEventListener("mouseover",function(){
+                this.classList.toggle("active")
+            })
+        }
+    </script>
+</body>
+</html>

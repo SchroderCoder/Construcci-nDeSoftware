@@ -1,0 +1,65 @@
+li:hover {
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.hide {
+    display: none;
+}
+  
+body{
+    background-color: rgb(224, 105, 94)
+ } 
+h3:hover {
+    background-color: bisque;
+
+}   
+
+h3{
+    color: white;
+}
+
+.accordion{
+    max-width: 800px;
+
+}
+
+.accordion.contentBx{
+    position: relative;
+    margin: 10px, 20px;
+}
+
+.accordion .contentBx .label{
+    position: relative;
+    padding: 10px;
+    background:  #e73c33;
+    color: white;
+    cursor: pointer;
+}
+
+.accordion .contentBx .label::before{
+    content: "+";
+    position:absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+}
+
+.accordion .contentBx.active .label::before{
+    content: "-";
+}
+
+.accordion .contentBx .content{
+    position: relative;
+    background: rgb(241, 235, 235);
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y:auto;
+}
+
+.accordion .contentBx.active .content{
+    height: 150px;
+    padding: 10px;
+}
