@@ -22,19 +22,19 @@ const server = http.createServer( (request, response) => {
     console.log(request.socket.remoteAddress);
 
     if (request.url === "/lab1" && request.method === "GET") {
-        html = fs.readFileSync('primeroslabs/lab1.html');
+        html = fs.readFileSync('./views/primeroslabs/lab1.html');
         response.end(html);
         response.end();
     } 
     
     else if (request.url === "/lab3" && request.method === "GET") {
-        html = fs.readFileSync("primeroslabs/lab3.html");
+        html = fs.readFileSync("./views/primeroslabs/lab3.html");
         response.end(html);
         response.end();
     } 
     
     else if (request.url === "/lab4" && request.method === "GET") {
-        html = fs.readFileSync('primeroslabs/lab4.html');
+        html = fs.readFileSync('./views/primeroslabs/lab4.html');
         response.end(html);
         response.end();
     } 

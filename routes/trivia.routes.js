@@ -1,35 +1,29 @@
 const express = require('express');
+const path = require('path');
 
 const router = express.Router();
 
-router.get("/info", (request, response, next) => {
-    response.sendFile(path.join(__dirname,))
-})
+const ganadores = [];
+
 router.get('/trivia', (request, response, next) => {
-    let html = '<!DOCTYPE html>' +
-        '<head><meta charset="UTF-8"></head>' +
-        "<h1>Pregunta al pulpo quién va a ganar</h1>" +
-        '<form action="trivia" method="POST">' +
-        '<fieldset>' +
-        '<legend>Equipos</legend>' +
-        '<label for="visitante">Visitante</label><input type="text" name="visitante" id="visitante">' +
-        '<br><br>' +
-        '<label for="local">Local</label><input type="text" name="local" id="local">' +
-        '</fieldset>' +
-        '<input type="submit" value="Adivina">' +
-        '</form>';
-    response.send(html);
+    response.sendFile(path.join(__dirname, '..', 'views', 'paul', 'trivia.html'));
 });
 
 router.post('/trivia', (request, response, next) => {
     console.log(request.body);
+    let ganador = '';
     if (Math.floor(Math.random() * 2) == 0) {
-        response.send('<h2>El ganador será: ' 
-            + request.body.visitante + '</h2>');
+        ganador = request.body.visitante;
     } else {
-        response.send('<h2>El ganador será: ' 
-            + request.body.local + '</h2>');
+        ganador = request.body.local;
     }
+
+    console.log(ganador);
+    ganadores.push(ganador);
+    response.render(path.join('paul', 'ganador.ejs'), {
+        ganador: ganador, 
+        ganadores: ganadores,
+    });
 });
 
 module.exports = router;

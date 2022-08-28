@@ -63,3 +63,12 @@ h3{
     height: 150px;
     padding: 10px;
 }
+
+p:hover {
+    color: #dc143c;
+    font-family: "Courier New", Courier, monospace;
+}
+
+h2{
+    color:azure;
+}

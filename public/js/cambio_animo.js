@@ -1,4 +1,3 @@
-
 const boton_cambio_animo= document.getElementById("cambiar_animo");
 
 let is_happy= false;

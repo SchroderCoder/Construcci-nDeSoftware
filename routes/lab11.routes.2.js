@@ -3,13 +3,13 @@ const fs = require('fs');
 const router = express.Router();
 
 router.get('/lab5', (request, response, next) => {
-    html = fs.readFileSync('primeroslabs/lab5.html');
+    html = fs.readFileSync('./views/primeroslabs/lab5.html');
         response.end(html);
         response.end();
 });
 
 router.get('/lab6', (request, response, next) => {
-    html = fs.readFileSync('primeroslabs/lab6.html');
+    html = fs.readFileSync('./views/primeroslabs/lab6.html');
         response.end(html);
         response.end();
 });
