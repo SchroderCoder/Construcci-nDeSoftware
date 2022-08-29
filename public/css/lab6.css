@@ -72,3 +72,11 @@ p:hover {
 h2{
     color:azure;
 }
+
+#div1 {
+    width: 250px;
+    height: 250px;
+    padding: 0px;
+    border: 1px solid #aaaaaa;
+    background-color: brown;
+  }

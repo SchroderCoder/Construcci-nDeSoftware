@@ -13,19 +13,55 @@
             <li><a href="lab6juego.html">Minigame</a></li>
           </ul>
         </div>
-      </nav>
-        <div class="container">
+    </nav>
+    <div class="container">
             <!-- Page Content goes here -->
-        <meta charset="UTF-8">
-        <link type="text/css" rel="stylesheet" href="C:\Users\Charlie\OneDrive\Documentos\4to Semestre\Software\Construcci-nDeSoftware\public\css\lab6.css" media="screen, projection"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="C:\Users\Charlie\OneDrive\Documentos\4to Semestre\Software\Construcci-nDeSoftware\public\css\lab6.css" media="screen, projection"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 
 <body>
     <section>
         <article>
-            <h2> JAJIJIJI</h2>
-        </article>
+            <h2> Bienvenido a la tienda imposible</h2>
+            <div class="div1">
+                <h1>En esta tienda se venden puras cosas raras</h1>
+                <form action="tienda" method="POST">
+                    <fieldset>
+                        <label for="antimateria" style=" color:white">1mg de antimateria</label>
+                        <img id="1gr" src="C:\Users\Charlie\OneDrive\Imágenes\antimateria.jpg" width="100" height="100" alt= "gramo de antimateria"> 
+                        <p> Precio: $62,500,000,000 </p> 
+                        <input type="number" name="antimateria" min=1 max= 10 id="cant1">
+                    </fieldset>
+                    <br>
+                    <input type="submit" class="btn" value="comprar" id="anti">
+                </form>
+                
+                <form action="tienda" method="POST">
+                    <fieldset>
+                        <label for="crush" style=" color:white"> Que tu crush te ame </label>
+                        <img id="crush" src="C:\Users\Charlie\OneDrive\Imágenes\crush.jpg" width="100" height="100" alt= " tú y tu crush">
+                        <p> Precio: $150,000,000,000 </p> 
+                        <input type="number" name="crush" min= 1 max =1 id="cant2">
+                    </fieldset>
+                    <br>
+                    <input type="submit" class="btn" value="comprar" id="crush">
+                </form>
+
+                <form action="tienda" method="POST">
+                    <fieldset>
+                        <label for="antimateria" style=" color:white"> Saul </label>
+                        <img id="saul" src="C:\Users\Charlie\OneDrive\Imágenes\saul.jpg" width="100" height="100" alt= "solgudman">
+                        <p> Precio: $111,111,111,111 </p> 
+                        <input type="number" name="antimateria" min=1 max =100 id="cant3">
+                    </fieldset>
+                    <br>
+                    <input type="submit" class="btn" value="comprar" id="saul">
+                </form>
+
+            </div>
+        </article> 
     </section>
     <footer class="page-footer red">
         <div class="container">
@@ -44,4 +80,5 @@
           </div>
         </div>
     </footer>
+    <script src="precios.js"></script>
 </body>

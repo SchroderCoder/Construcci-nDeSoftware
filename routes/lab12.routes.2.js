@@ -12,10 +12,13 @@ router.get('/lab12', (request, response, next) => {
 });
 
 router.post('/lab12', (request, response, next) => {
-    let lalo= "papel";
+    let lalo= request.body.elige;
     let ganador= "";
     let respuestas = ["piedra","papel","tijera"];
     charlie= respuestas[Math.floor(Math.random() * 3)];
+
+    console.log(lalo);
+    console.log(charlie);
 
     if(lalo === charlie){
         ganador= "empate!";
