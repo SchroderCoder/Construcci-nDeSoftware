@@ -7,7 +7,8 @@
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "startlab": "node lab11.js",
-    "startlab2": "node lab12.js"
+    "startlab2": "node lab12.js",
+    "startlab3": "node lab13.js"
   },
   "repository": {
     "type": "git",
