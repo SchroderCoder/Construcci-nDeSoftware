@@ -1,5 +1,6 @@
 <%- include('includes/head.ejs') %>
-<%- include('includes/nav.ejs') %>    
+<%- include('includes/nav.ejs') %>       
+
     <h1>El ganador es:  <%= ganador %></h1>
     <% if (ganadores.length > 0) { %>
         <div class="collection">
@@ -10,4 +11,5 @@
     <% } else { %>
         <h2>No hay juegos previos</h2>
     <% } %>  
+    <p>Has jugado contra charlie:  <%= clicks %> veces.</p>
 <%- include("includes/foot.ejs") %>
