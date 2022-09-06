@@ -1,0 +1,27 @@
+<h1>Pregunta al pulpo quién va a ganar</h1>
+<form action="trivia" method="POST">
+    <fieldset>
+        <legend>Equipos</legend>
+        <div class="input-field col s12">
+            <select name="visitante" id="visitante">
+                <option value="" disabled selected>Choose your option</option>
+                <% for (let e of equipos) { %>
+                    <option value="<%= e.nombre %>"><%= e.nombre %></option>
+                <% } %>
+            </select>
+            <label for="visitante">Visitante</label>
+        </div>
+        <br><br>
+        <div class="input-field col s12">
+            <select name="local" id="local">
+                <option value="" disabled selected>Choose your option</option>
+                <% for (let e of equipos) { %>
+                    <option value="<%= e.nombre %>"><%= e.nombre %></option>
+                <% } %>
+            </select>
+            <label for="local">Local</label>
+        </div>
+    </fieldset>
+    <br>
+    <input type="submit" class="btn" value="Adivina">
+</form>

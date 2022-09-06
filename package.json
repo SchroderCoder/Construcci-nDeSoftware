@@ -6,10 +6,11 @@
   "scripts": {
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "startlab": "node lab11.js",
+    "startlab1": "node lab11.js",
     "startlab2": "node lab12.js",
     "startlab3": "node lab13.js",
-    "startlab4": "node lab14.js"
+    "startlab4": "node lab14.js",
+    "startlab5": "node lab17.js"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
     "nodemon": "^2.0.19"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body": "^5.1.0",
     "cookie-parser": "^1.4.6",
     "ejs": "^3.1.8",
