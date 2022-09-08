@@ -4,13 +4,13 @@
   "description": "Laboratorios TC2005B ad22",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "startlab1": "node lab11.js",
-    "startlab2": "node lab12.js",
-    "startlab3": "node lab13.js",
-    "startlab4": "node lab14.js",
-    "startlab5": "node lab17.js"
+    "startlab1": "nodemon lab11.js",
+    "startlab2": "nodemon lab12.js",
+    "startlab3": "nodemon lab13.js",
+    "startlab4": "nodemon lab14.js",
+    "startlab5": "nodemon lab17.js"
   },
   "repository": {
     "type": "git",
@@ -32,6 +32,7 @@
     "bcryptjs": "^2.4.3",
     "body": "^5.1.0",
     "cookie-parser": "^1.4.6",
+    "csurf": "^1.11.0",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
     "express-session": "^1.17.3",

@@ -8,6 +8,7 @@ exports.getjugadores = (request, response, next) => {
             console.log(rows);
             response.render(path.join('Jugador', 'jugador.ejs'), {
                 jugadores: rows,
+                isLoggedIn: request.session.isLoggedIn ? request.session.isLoggedIn : false,
             });
         })
         .catch(err => {
@@ -19,7 +20,9 @@ exports.getjugadores = (request, response, next) => {
 
 exports.getNewjugador = (request, response, next) => {
 
-    response.render(path.join('Jugador', 'nuevo.ejs'));
+    response.render(path.join('Jugador', 'nuevo.ejs'),{
+        isLoggedIn: request.session.isLoggedIn ? request.session.isLoggedIn : false,
+    });
 
 };
 
@@ -34,12 +37,15 @@ exports.postNewjugador = (request, response, next) => {
                     console.log(rows);
                     response.render(path.join('Jugador', 'jugador.ejs'), {
                     jugadores: rows,
+                    isLoggedIn: request.session.isLoggedIn ? request.session.isLoggedIn : false,
                 })
             });
         })
         .catch(err => {
             console.log(err);
-            response.render('error.ejs');
+            response.render('error.ejs',{
+                isLoggedIn: request.session.isLoggedIn ? request.session.isLoggedIn : false,
+            });
         });
     
 };

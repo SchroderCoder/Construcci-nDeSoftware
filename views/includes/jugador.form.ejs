@@ -1,5 +1,6 @@
 <h2>Registra un nuevo jugador de piedra papel o tijera</h2>
 <form action="new" method="POST">
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
     <fieldset>
         <legend>Jugador</legend>
             <input placeholder="Buffon" id="nombre" name="nombre" type="text" required>

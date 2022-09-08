@@ -30,14 +30,17 @@ exports.getLab17 = (request, response, next) => {
     const numero_clicks = request.cookies.numero_clicks ? request.cookies.numero_clicks : 0;
     const ultimo_ganador = request.session.ultimo_ganador ? request.session.ultimo_ganador : false;
 
+    let respuestas = ["piedra","papel","tijera"];
+
     Jugador.fetchAll()
-        .then(([rows, fieldData]) => {
-            console.log("Jugadores: ");
+        .then(([rows, fieldData]) => {     
             console.log(rows);
             response.render(path.join("..",'views', 'lab17.ejs'), {
                 clicks: request.cookies.numero_clicks ? request.cookies.numero_clicks : numero_clicks,
                 ultimo_ganador: ultimo_ganador,
                 jugadores: rows,
+                mano: respuestas,
+                isLoggedIn: request.session.isLoggedIn ? request.session.isLoggedIn : false,
             });
         })
         .catch(err => {
@@ -47,38 +50,38 @@ exports.getLab17 = (request, response, next) => {
 };
 
 exports.postLab17 = (request, response, next) => {
-
-    let lalo= request.body.elige;
-    let ganador= "";
     let respuestas = ["piedra","papel","tijera"];
-    charlie= respuestas[Math.floor(Math.random() * 3)];
+    let name = request.body.jugadores;
+    let player= request.body.mano;
+    let ganador= "";
+    compu= respuestas[Math.floor(Math.random() * 3)];
 
-    console.log(lalo);
-    console.log(charlie);
+    console.log(player);
+    console.log(compu);
 
 
-    if(lalo === charlie){
+    if(player === compu){
         ganador= "empate!";
     }
-    else if(lalo == 'piedra'){
-        if(charlie == 'papel'){
-            ganador= "Ganó Charlie!";
+    else if(player == 'piedra'){
+        if(compu == 'papel'){
+            ganador= "Ganó la compu!";
         }else{
-            ganador= "Ganó Lalo!";
+            ganador= "Ganó "+ name +"!";
         }
     }
-    else if(lalo == 'tijera'){
-        if(charlie == 'piedra'){
-            ganador= "Ganó Charlie!";
+    else if(player == 'tijera'){
+        if(compu == 'piedra'){
+            ganador= "Ganó la compu!";
         }else{
-            ganador= "Ganó Lalo!";
+            ganador= "Ganó "+ name +"!";
         }
     }
-    else if(lalo == 'papel'){
-        if(charlie == 'tijera'){
-            ganador= "Ganó Charlie!";
+    else if(player == 'papel'){
+        if(compu == 'tijera'){
+            ganador= "Ganó la compu!";
         }else{
-            ganador= "Ganó lalo!";
+            ganador= "Ganó "+ name +"!";
         }
     }
 
@@ -97,5 +100,6 @@ exports.postLab17 = (request, response, next) => {
         ganador: unGanador.nombre, 
         ganadores: Ganador.fetchAll(),
         clicks: numero_clicks,
+        isLoggedIn: request.session.isLoggedIn ? request.session.isLoggedIn : false,
     });
 };

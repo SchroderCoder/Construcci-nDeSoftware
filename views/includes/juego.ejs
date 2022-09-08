@@ -1,27 +1,29 @@
-<article>
-    <div class="container">
-        <h1>Juguemos piedra papel o tijera</h1>
-        <form action="lab17" method="POST">
-            <fieldset>
-                <legend>Jugadores</legend>
-                <div class="input-field col s12">
-                    <select name="Jugador" id="Jugador">
-                        <option value="" disabled selected>Elige</option>
-                        <% for (let j of jugadores) { %>
-                            <option value="<%= j.nombre %>"><%= j.nombre %></option>
-                        <% } %>
-                    </select>
-                    <label for="Jugador">Jugador</label>
-                </div>
-            </fieldset>
-            <fieldset>
-                <legend>Elige y cuando presiones el boton jugar yo también eligiré!</legend>
-                <br><br>
-                <label style="color: white"> piedra papel o tijera</label>
-                <input type="elige" name="elige" id="elige">
-            </fieldset>
-            <br>
-            <input type="submit" class="btn" value="Jugar">
-        </form>
-    </div>
-</article>
+<h1>Juguemos piedra papel o tijera</h1>
+<form action="lab17" method="POST">
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
+    <fieldset>
+        <legend>Juego</legend>
+        <div class="input-field col s12">
+            <select name="jugadores" id="jugadores">
+                <option value="" disabled selected>Elige un jugador</option>
+                <% for (let j of jugadores) { %>
+                    <option value="<%= j.nombre %>"><%= j.nombre %></option>
+                <% } %>
+            </select>
+            <label for="jugadores">Jugadores</label>
+        </div>
+        <br><br>
+        <div class="input-field col s12">
+            <select name="mano" id="mano">
+                <option value="" disabled selected>Elige tu mano</option>
+                <% for (let m of mano) { %>
+                    <option value="<%= m %>"><%= m %></option>
+                <% } %>
+            </select>
+            <label for="mano">Mano</label>
+        </div>
+        <br>
+        <input type="submit" class="btn" value="Juega!">
+    </fieldset>
+    <br>
+</form>

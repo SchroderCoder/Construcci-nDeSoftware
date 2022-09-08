@@ -1,14 +1,17 @@
 <%- include('includes/head.ejs') %>
-<body>
+
     <%- include('includes/nav.ejs') %>  
     <%- include('includes/juego.ejs') %>     
     <%- include('includes/pregunta.lab17.ejs') %>   
     <article>
         <h3> Referencias</h3>
         <ul>   
-            <li><a href=></a></li>
+            <li><a href=https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html>SQL Injection Prevention Cheat Sheet</a></li>
         </ul>
+        <% if (ultimo_ganador) { %>
+            <p>El útimo ganador fue <%= ultimo_ganador.nombre %>.</p>
+        <% } %>
+        <p>Has jugado contra la compu <%= clicks %> veces.</p>
     </article>
     <%- include('includes/foot.ejs') %>   
     <%- include('includes/script.ejs') %>  
-</body>

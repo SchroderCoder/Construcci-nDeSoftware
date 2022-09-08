@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
+const csrf = require('csurf');
 
 const app = express();
 
@@ -22,6 +23,13 @@ app.use(session({
     saveUninitialized: false, //Asegura que no se guarde una sesión para una petición que no lo necesita
 }));
 
+const csrfProtection = csrf();
+app.use(csrfProtection); 
+
+app.use((request, response, next) => {
+    response.locals.csrfToken = request.csrfToken();
+    next();
+});
 
 const rutas_usuario = require('./routes/user.routes.js');
 app.use('/user', rutas_usuario);
