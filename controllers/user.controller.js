@@ -30,7 +30,7 @@ exports.getLogin = (request, response, next) => {
 };
 
 exports.postLogin = (request, response, next) => {
-    // Recuper el usuario (si es que existe)
+    // Recupera el usuario (si es que existe)
     return Usuario.fetchOne(request.body.username)
         .then(([rows, fielData]) => {
             if (rows.length == 1) {

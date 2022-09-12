@@ -4,9 +4,9 @@ const isAuth = require('../util/is-auth.js');
 
 const userController = require('../controllers/user.controller');
 
-router.get('/new',  userController.getNuevo);
+router.get('/new', isAuth, userController.getNuevo);
 
-router.post('/new', userController.postNuevo);
+router.post('/new',isAuth, userController.postNuevo);
 
 router.get('/login', userController.getLogin);
 
